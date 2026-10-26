@@ -1,8 +1,8 @@
 {
- "version": "v1.0",
- "asset": "FF9_Steam_KO_v1.0.zip",
- "asset_size": 17310574,
- "asset_sha256": "cc8b5a2ecff8fac87ae6efa4e3b11b23977a1bf5d243d6589e27c399f5256c83",
+ "version": "v1.0.1",
+ "asset": "FF9_Steam_KO_v1.0.1.zip",
+ "asset_size": 17310708,
+ "asset_sha256": "129f407f91c6f1152c847f7a26a6f0df34ffa1a3351307efe2c6a05e43a4dc98",
  "steam_appid": 377840,
  "steam_buildid": "5378074",
  "files": [
@@ -31,10 +31,10 @@
    "source_size": 4036608,
    "source_sha256": "2fd5a4b7300a2806b875a9913e9001ed970c2ce4e449938a00d142fd1339b8d2",
    "result_size": 3985408,
-   "result_sha256": "b19c0ba17f27f5ebd6bd276bdf77a091700d4158a1e37d5eb76e62d99a6096de",
+   "result_sha256": "c4b2cea3d99fd42c42e320b353b940a3d85f8be02a7952646703aaa7981b6c81",
    "xdelta": "x64_Assembly-CSharp.dll.xdelta",
    "xdelta_size": 813971,
-   "xdelta_sha256": "f85df045e707b26c01eeac7d0be8a37caddb4bc10ae17ccae369c15b8924f417"
+   "xdelta_sha256": "ca510a5b9b68ca44754bf439777d2c93ad4743fa67c3adf685005e06603eb893"
   },
   {
    "path": "x86/FF9_Data/resources.assets",
@@ -61,10 +61,10 @@
    "source_size": 4036608,
    "source_sha256": "55fbcaa4e74ac3456d517b816050c3e63a7cddcac033dadeae17b9af0daec557",
    "result_size": 3985408,
-   "result_sha256": "b1b43b400fe8e557b6d0662548af3b7c853f671cb2e4dac615661a40d4eb7e12",
+   "result_sha256": "f24e4a449007781245e7a13336746eebfdde0a6bcdda35c9782ec0249e42b170",
    "xdelta": "x86_Assembly-CSharp.dll.xdelta",
    "xdelta_size": 813971,
-   "xdelta_sha256": "ccf0c518968c21a95761def9140332a607b6006e52b44f7902a682d83471a3d5"
+   "xdelta_sha256": "edd795227c690d4da495b8aecdbc4537a8db240f3ef2457e7d02adb54848f04f"
   }
  ]
 }

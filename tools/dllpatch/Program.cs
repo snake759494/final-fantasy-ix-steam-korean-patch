@@ -4,7 +4,7 @@ var res = new DefaultAssemblyResolver(); res.AddSearchDirectory(System.IO.Path.G
 var asm = AssemblyDefinition.ReadAssembly(src, new ReaderParameters { AssemblyResolver = res });
 var mod = asm.MainModule;
 // 1) 기본 이름(English(US)) 한글화
-var ko = new[] { "지탄","비비","다가","스타이너","프레이야","쿠이나","에이코","앰버라","시나","시나","마커스","마커스","블랭크","블랭크","베아트릭스","베아트릭스","지탄","시나","마커스","블랭크" };
+var ko = new[] { "지탄","비비","대거","스타이너","프레이야","쿠이나","에이코","앰버라","시나","시나","마커스","마커스","블랭크","블랭크","베아트릭스","베아트릭스","지탄","시나","마커스","블랭크" };
 var m = mod.Types.SelectMany(t => t.Methods).First(x => x.Name == "CharacterDefaultName");
 var ins = m.Body.Instructions.ToList();
 int us = ins.FindIndex(i => i.OpCode == OpCodes.Ldstr && (string)i.Operand == "English(US)");

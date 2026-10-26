@@ -17,10 +17,17 @@ class Program
     {
         ("x64/FF9_Data/resources.assets", "8d917350d2f10c8e693d7aaed2f41299", "0feddb7e229daddf61183b6515c3f2f5", "x64_resources.assets.xdelta"),
         ("x64/FF9_Data/sharedassets2.assets", "f267fbbb8715059207658d28d1707e22", "0797d129ec0ca503531bc58a2ff6dd18", "x64_sharedassets2.assets.xdelta"),
-        ("x64/FF9_Data/Managed/Assembly-CSharp.dll", "5b01d22c45fb5ad3c160ee951ee0a883", "34a65ca60e5eae5c3738146a708f7a75", "x64_Assembly-CSharp.dll.xdelta"),
+        ("x64/FF9_Data/Managed/Assembly-CSharp.dll", "5b01d22c45fb5ad3c160ee951ee0a883", "3cf542b68f2bf09b46c2c2455d354396", "x64_Assembly-CSharp.dll.xdelta"),
         ("x86/FF9_Data/resources.assets", "04fa527e534847b11595d1106be60400", "1b5790c9eccf3628375697f850bfe65f", "x86_resources.assets.xdelta"),
         ("x86/FF9_Data/sharedassets2.assets", "77ebb5fea9763099d5488559ba95802e", "f94327a2b39764c8b6fd53401e2a153f", "x86_sharedassets2.assets.xdelta"),
-        ("x86/FF9_Data/Managed/Assembly-CSharp.dll", "886a5a9d2d91cfe25c2cd383d77ecc95", "e77a6df87458cb99d2c680c83f54c24c", "x86_Assembly-CSharp.dll.xdelta"),
+        ("x86/FF9_Data/Managed/Assembly-CSharp.dll", "886a5a9d2d91cfe25c2cd383d77ecc95", "3280d8fa254f8d43e17e8295e5e6b271", "x86_Assembly-CSharp.dll.xdelta"),
+    };
+
+    // 이전 버전 패치본 해시 (원본 백업에서 다시 패치)
+    static readonly HashSet<string> OldPatched = new HashSet<string>
+    {
+        "34a65ca60e5eae5c3738146a708f7a75", // v1.0 x64 Assembly-CSharp.dll
+        "e77a6df87458cb99d2c680c83f54c24c", // v1.0 x86 Assembly-CSharp.dll
     };
 
     static string Here => AppContext.BaseDirectory;
@@ -87,6 +94,15 @@ class Program
             Console.Write($"확인 중: {t.Path} ... ");
             string h = Md5(f);
             if (h == t.Patched) { Console.WriteLine("이미 패치됨"); continue; }
+            if (OldPatched.Contains(h))
+            {
+                string ob = Path.Combine(backup, t.Path);
+                if (!File.Exists(ob) || Md5(ob) != t.Orig)
+                    return Fail("이전 버전 패치가 적용되어 있으나 원본 백업이 없습니다: " + t.Path + "\nSteam에서 '게임 파일 무결성 확인' 후 다시 시도하세요.");
+                Console.WriteLine("이전 버전 패치 → 갱신");
+                todo.Add(t);
+                continue;
+            }
             if (h != t.Orig)
             {
                 Console.WriteLine("알 수 없는 버전");
@@ -103,7 +119,7 @@ class Program
             string f = Path.Combine(game, t.Path);
             string b = Path.Combine(backup, t.Path);
             Directory.CreateDirectory(Path.GetDirectoryName(b));
-            if (!File.Exists(b) || Md5(b) != t.Orig) File.Copy(f, b, true);
+            if ((!File.Exists(b) || Md5(b) != t.Orig) && Md5(f) == t.Orig) File.Copy(f, b, true);
             string tmp = f + ".kortmp";
             Console.Write($"패치 중: {t.Path} ... ");
             var psi = new ProcessStartInfo(xdelta, $"-d -f -s \"{b}\" \"{Path.Combine(Here, "patch", t.Delta)}\" \"{tmp}\"")
