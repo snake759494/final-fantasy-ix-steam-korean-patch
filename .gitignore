@@ -1,0 +1,23 @@
+# 게임 원본·산출물 (배포하지 않음)
+*.assets
+*.xdelta
+*.mpc
+*.bundle
+bodies.json
+segfiles.json
+trans/
+work/
+# 글꼴·외부 실행 파일·이미지
+*.ttf
+*.otf
+*.exe
+*.dll
+*.png
+*.jpg
+*.zip
+# 빌드 산출물
+bin/
+obj/
+out/
+__pycache__/
+*.pyc
