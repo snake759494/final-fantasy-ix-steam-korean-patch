@@ -15,10 +15,10 @@ class Program
     // (상대 경로, 원본 MD5, 패치본 MD5, xdelta 파일)
     static readonly (string Path, string Orig, string Patched, string Delta)[] Targets =
     {
-        ("x64/FF9_Data/resources.assets", "8d917350d2f10c8e693d7aaed2f41299", "0feddb7e229daddf61183b6515c3f2f5", "x64_resources.assets.xdelta"),
+        ("x64/FF9_Data/resources.assets", "8d917350d2f10c8e693d7aaed2f41299", "eb7494330c011cde986a133ef45ccf70", "x64_resources.assets.xdelta"),
         ("x64/FF9_Data/sharedassets2.assets", "f267fbbb8715059207658d28d1707e22", "0797d129ec0ca503531bc58a2ff6dd18", "x64_sharedassets2.assets.xdelta"),
         ("x64/FF9_Data/Managed/Assembly-CSharp.dll", "5b01d22c45fb5ad3c160ee951ee0a883", "3cf542b68f2bf09b46c2c2455d354396", "x64_Assembly-CSharp.dll.xdelta"),
-        ("x86/FF9_Data/resources.assets", "04fa527e534847b11595d1106be60400", "1b5790c9eccf3628375697f850bfe65f", "x86_resources.assets.xdelta"),
+        ("x86/FF9_Data/resources.assets", "04fa527e534847b11595d1106be60400", "6ca77c39079183a6cf9b6276e0ff1002", "x86_resources.assets.xdelta"),
         ("x86/FF9_Data/sharedassets2.assets", "77ebb5fea9763099d5488559ba95802e", "f94327a2b39764c8b6fd53401e2a153f", "x86_sharedassets2.assets.xdelta"),
         ("x86/FF9_Data/Managed/Assembly-CSharp.dll", "886a5a9d2d91cfe25c2cd383d77ecc95", "3280d8fa254f8d43e17e8295e5e6b271", "x86_Assembly-CSharp.dll.xdelta"),
     };
@@ -28,6 +28,8 @@ class Program
     {
         "34a65ca60e5eae5c3738146a708f7a75", // v1.0 x64 Assembly-CSharp.dll
         "e77a6df87458cb99d2c680c83f54c24c", // v1.0 x86 Assembly-CSharp.dll
+        "0feddb7e229daddf61183b6515c3f2f5", // v1.0~v1.0.1 x64 resources.assets
+        "1b5790c9eccf3628375697f850bfe65f", // v1.0~v1.0.1 x86 resources.assets
     };
 
     static string Here => AppContext.BaseDirectory;

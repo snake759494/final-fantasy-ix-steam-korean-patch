@@ -35,7 +35,7 @@ def load_trans():
 STRT = re.compile(r'\[STRT=(\d+),(\d+)\]')
 
 
-OVERRIDE = {'item/': {'Dagger': '대거'}}
+OVERRIDE = {}  # 파일별 예외 번역 {'경로 접두어': {'원문': '번역'}}
 
 
 def rebuild(segs, bodies, ko, rel=''):

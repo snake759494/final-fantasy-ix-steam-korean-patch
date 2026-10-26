@@ -1,10 +1,10 @@
 # 파이널 판타지 IX (Steam) 한글패치
 
-Steam PC판 **FINAL FANTASY IX (AppID 377840)** 용 비공식 한국어 패치입니다. 대사·메뉴·아이템·어빌리티·지명·몬스터·전투 메시지·시스템 문구 전체와 타이틀·메뉴·엔딩 자막의 글자 그림을 한국어로 바꿨습니다. 현재 배포판은 **v1.0.1 (2026-10-26)** 입니다.
+Steam PC판 **FINAL FANTASY IX (AppID 377840)** 용 비공식 한국어 패치입니다. 대사·메뉴·아이템·어빌리티·지명·몬스터·전투 메시지·시스템 문구 전체와 타이틀·메뉴·엔딩 자막의 글자 그림을 한국어로 바꿨습니다. 현재 배포판은 **v1.0.2 (2026-10-26)** 입니다.
 
 [패치 다운로드](https://github.com/snake759494/final-fantasy-ix-steam-korean-patch/releases/latest) · [기술 설명](docs/TECHNICAL.md) · [재빌드](docs/BUILD.md) · [변경 기록](CHANGELOG.md) · [권리 안내](RIGHTS.md)
 
-릴리즈 첨부 파일은 **FF9_Steam_KO_v1.0.1.zip 하나**입니다. zip 안에는 설치 프로그램(`FF9_KorPatcher.exe`), `xdelta.exe`, 원본 게임 파일이 있어야만 쓸 수 있는 차분 파일(xdelta) 6개가 들어 있습니다. 저장소에는 제작 도구와 기술 문서만 공개합니다. 원본 및 패치된 게임 파일, 글꼴 파일, 영어 원문, 번역 대본은 포함하지 않습니다. GitHub 가 자동 생성하는 Source code ZIP/TAR 는 저장소 소스의 압축본이며 게임 파일이 아닙니다.
+릴리즈 첨부 파일은 **FF9_Steam_KO_v1.0.2.zip 하나**입니다. zip 안에는 설치 프로그램(`FF9_KorPatcher.exe`), `xdelta.exe`, 원본 게임 파일이 있어야만 쓸 수 있는 차분 파일(xdelta) 6개가 들어 있습니다. 저장소에는 제작 도구와 기술 문서만 공개합니다. 원본 및 패치된 게임 파일, 글꼴 파일, 영어 원문, 번역 대본은 포함하지 않습니다. GitHub 가 자동 생성하는 Source code ZIP/TAR 는 저장소 소스의 압축본이며 게임 파일이 아닙니다.
 
 ## 대상 버전
 
@@ -12,17 +12,17 @@ Steam PC판 **FINAL FANTASY IX (AppID 377840)** 용 비공식 한국어 패치�
 
 | 파일 | 원본 크기 | 원본 SHA-256 | 결과 SHA-256 |
 | --- | --- | --- | --- |
-| `x64/FF9_Data/resources.assets` | 590,057,040 | `4dbd0b3fe547406884d7d3a79471c5fc7c34756940ede1515c6afe4de116532d` | `7c563f87ad5f9dca4039b53215f49a7fdccabed33f963de62a6e20b70402fd40` |
+| `x64/FF9_Data/resources.assets` | 590,057,040 | `4dbd0b3fe547406884d7d3a79471c5fc7c34756940ede1515c6afe4de116532d` | `336c0cd1faefd49f1cec1d119b204c1714d2990604848fd5a0c962c6879acde0` |
 | `x64/FF9_Data/sharedassets2.assets` | 198,981,708 | `5fbfd206b0f358542c887410d695d161a66c5ea9e3e0cf7f57742aab5433d666` | `d949836a3b5cd5edfbc1ceed9f8bdbd223fa7e399ee0e801dd5dab092ee0704a` |
 | `x64/FF9_Data/Managed/Assembly-CSharp.dll` | 4,036,608 | `2fd5a4b7300a2806b875a9913e9001ed970c2ce4e449938a00d142fd1339b8d2` | `c4b2cea3d99fd42c42e320b353b940a3d85f8be02a7952646703aaa7981b6c81` |
-| `x86/FF9_Data/resources.assets` | 590,057,040 | `725f6f1ca9d026370b6553a8c817c725090adceeba2080d4f639e374287846b6` | `932bf0f1b20ccee4255d6b14299fbbe135cc3e1d0f441948b4513c176c47ae38` |
+| `x86/FF9_Data/resources.assets` | 590,057,040 | `725f6f1ca9d026370b6553a8c817c725090adceeba2080d4f639e374287846b6` | `cc7eaff1aa525eb1f4544d77b23b81e139a11e68e93138a849c8ad2d0727c4f6` |
 | `x86/FF9_Data/sharedassets2.assets` | 198,981,708 | `94c59ab70de49b6595b8e5c6493a3ec0c98d42a85494976ddbdc9c6c3a2c8d7f` | `e46c417f055216a1d442e86c8c720ad9dd8bc349f6b65c41e4afa0339b2863f5` |
 | `x86/FF9_Data/Managed/Assembly-CSharp.dll` | 4,036,608 | `55fbcaa4e74ac3456d517b816050c3e63a7cddcac033dadeae17b9af0daec557` | `f24e4a449007781245e7a13336746eebfdde0a6bcdda35c9782ec0249e42b170` |
 
 | 항목 | 값 |
 | --- | --- |
-| 첨부 파일 | `FF9_Steam_KO_v1.0.1.zip` (17,310,708 바이트) |
-| zip SHA-256 | `129f407f91c6f1152c847f7a26a6f0df34ffa1a3351307efe2c6a05e43a4dc98` |
+| 첨부 파일 | `FF9_Steam_KO_v1.0.2.zip` (17,310,622 바이트) |
+| zip SHA-256 | `2cc784a24b0de5bd3162aea722714f72c90ce295c3224adc7ce3fd361d4ee8be` |
 
 xdelta 파일별 크기·해시는 [release_manifest.json](release_manifest.json) 에 있습니다.
 
@@ -31,7 +31,7 @@ xdelta 파일별 크기·해시는 [release_manifest.json](release_manifest.json
 ### 설치 프로그램 사용 (권장)
 
 1. 게임을 종료합니다.
-2. 릴리즈에서 `FF9_Steam_KO_v1.0.1.zip` 을 받아 아무 폴더에 압축을 풉니다.
+2. 릴리즈에서 `FF9_Steam_KO_v1.0.2.zip` 을 받아 아무 폴더에 압축을 풉니다.
 3. `FF9_KorPatcher.exe` 를 실행하고 `1) 한글패치 설치` 를 고릅니다.
    - Steam 레지스트리와 `libraryfolders.vdf` 에서 FF9 설치 폴더를 자동으로 찾습니다. 못 찾으면 경로를 직접 입력받습니다.
    - 대상 파일 6개의 MD5 를 먼저 모두 확인하고, 하나라도 버전이 다르면 아무 파일도 바꾸지 않습니다. 이전 버전 패치가 적용된 파일은 원본 백업에서 다시 패치합니다.
